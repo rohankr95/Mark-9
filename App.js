@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import "./styles.css";
 var moviesDB = {
   Action: [
-    { name: "Tenet", rating: "4.5/5" },
-    { name: "The Dark Knight", rating: "4.3/5" },
-    { name: "Avengers", rating: "4.7/5" }
+    { name: "Tenet", rating: "4.5/5",Description: "A fantastic Scifi movie" },
+    { name: "The Dark Knight", rating: "4.3/5", Description: "Directed by Christopher Nolan" },
+    { name: "Avengers", rating: "4.7/5", Description: "American superhero film based on the Marvel Comics superhero" }
   ],
   Romance: [
-    { name: "La La Land", rating: "4.4/5" },
-    { name: "Twilight", rating: "4.5/5" },
-    { name: "Titanic", rating: "4.6/5" }
+    { name: "La La Land", rating: "4.4/5", Description: "La La Land is a 2016 American musical romantic comedy-drama film" },
+    { name: "Twilight", rating: "4.5/5", Description: "The Twilight Saga is a series of five vampire-themed romance fantasy" },
+    { name: "Titanic", rating: "4.6/5", Description: "The film that broke every box office record" }
   ],
   Thriller: [
-    { name: "Shutter Island", rating: "4.4/5" },
-    { name: "Inception", rating: "4.7/5" },
-    { name: "Now you see mee", rating: "4.5/5" }
+    { name: "Shutter Island", rating: "4.4/5", Description: "Directed by Martin Scorsese"  },
+    { name: "Inception", rating: "4.7/5", Description: "Directed by Christopher Nolan" },
+    { name: "Now you see mee", rating: "4.5/5" , Description: "A 2013 American heist thriller film directed by Louis Leterrier"}
   ]
 };
 var movieGenre = Object.keys(moviesDB);
@@ -77,6 +77,9 @@ export default function App() {
                 </div>
                 <div style={{ fontSize: "larger", color: "#1F2937" }}>
                   {genre.rating}
+                </div>
+                <div style={{ fontSize: "larger", color: "#1F2937" }}>
+                  {genre.Description}
                 </div>
               </li>
             );
